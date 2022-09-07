@@ -1,7 +1,4 @@
-appId: com.creepycatsttv.gatoshot
-publish:
-  provider: github
-  token: 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
+appId: com.creepycatsttv.betterdeadshotclient
 win:
   artifactName: ${productName}-portable-${os}-${arch}.${ext}
   target:
