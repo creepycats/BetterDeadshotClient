@@ -16,7 +16,6 @@ var emotePicker;
 
 // Credits:
 // Gato/creepycats - Gatoclient (Yes I reused assets)
-// bread - Framework based off of the Official Client
 // Feeshdev - Official Deadshot Client
 
 // Before starting:
