@@ -192,13 +192,13 @@ app.on('ready', function () {
     async function autoUpdate() {
         return new Promise((resolve, reject) => {
             autoUpdater.checkForUpdatesAndNotify();
-            console.log('Launching Game');
-            launchGame();
-            splashWindow.webContents.send('havefun');
-            resolve();
+            //console.log('Launching Game');
+            //launchGame();
+            //splashWindow.webContents.send('havefun');
+            //resolve();
             // Splash screen no update
             autoUpdater.on('update-not-available', () => {
-                setTimeout(launchGame, 5000);
+                setTimeout(launchGame, 3000);
                 splashWindow.webContents.send('latest');
                 resolve();
             });
@@ -317,7 +317,10 @@ app.on('ready', function () {
             signinWindow.on('close', function (evt) {
                 
             });
-          return { action: 'allow' }
+          return { action: 'allow',overrideBrowserWindowOptions: {
+            frame: false,
+            show: false
+          } }
         } else {
           return { action: 'allow' }
         }
