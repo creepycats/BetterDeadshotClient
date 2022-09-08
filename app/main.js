@@ -70,7 +70,7 @@ const setActivity =
             rpc.setActivity({
                 details: "Playing Deadshot.io",
                 state: "v" + app.getVersion(),
-                //endTimestamp: Date.now() + 0 * 1000,  Hopefully we get rich presence hooks
+                startTimestamp: Date.now(),
                 largeImageKey: "icon",
                 buttons: [
                     { label: 'Download', url: 'https://github.com/creepycats/BetterDeadshotClient' }
