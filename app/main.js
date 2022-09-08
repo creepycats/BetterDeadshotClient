@@ -192,10 +192,10 @@ app.on('ready', function () {
     async function autoUpdate() {
         return new Promise((resolve, reject) => {
             autoUpdater.checkForUpdatesAndNotify();
-            //console.log('Launching Game');
-            //launchGame();
-            //splashWindow.webContents.send('havefun');
-            //resolve();
+            console.log('Launching Game');
+            launchGame();
+            splashWindow.webContents.send('havefun');
+            resolve();
             // Splash screen no update
             autoUpdater.on('update-not-available', () => {
                 setTimeout(launchGame, 3000);

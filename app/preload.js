@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Swap
     ipcRenderer.send("swapFiles");
 
-    //const titleUpdate = setInterval(function () {
-    //    if (!document.title.includes('BDS')) {
-    //        document.title = '' + document.title;
-    //    }
-    //}, 100);
+    const titleUpdate = setInterval(function () {
+        if (!document.title.includes('Deadshot')) {
+            document.title = 'Deadshot';
+        }
+    }, 100);
 })
 
 ipcRenderer.on('settingsSettings', (event, preferences) => {
