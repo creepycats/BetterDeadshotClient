@@ -11,12 +11,19 @@ require('v8-compile-cache');
 
 
 var emotePicker;
+var reloadOnChanges = false;
 
 // Main Process
 
 // Credits:
 // Gato/creepycats - Gatoclient (Yes I reused assets)
 // Feeshdev - Official Deadshot Client
+
+
+//Electron Auto Reload
+if (reloadOnChanges) {
+    require('electron-reload')(__dirname);
+}
 
 // Before starting:
 // Create Swapper folders if not existing
@@ -65,7 +72,7 @@ const clientId = "1016830391694413835";
 const rpc = new DiscordRpc.Client({ transport: 'ipc' });
 const setActivity =
     async (gameInfo) => {
-        console.log(gameInfo)
+        // console.log(gameInfo)
         try {
             rpc.setActivity({
                 details: "Playing Deadshot.io",
@@ -167,6 +174,7 @@ app.on('ready', function () {
         autoHideMenuBar: true,
         frame: false,
         skipTaskbar: true,
+        resizable: true,
         webPreferences: {
             preload: path.join(__dirname, 'splash/splashPreload.js'),
             nodeIntegration: true,

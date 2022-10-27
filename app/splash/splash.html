@@ -63,6 +63,8 @@
 				left:5%;
 				animation: logoSlide 3s;
 				animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+				/* disable drag */
+				-webkit-user-drag: none;
 			}
 			@keyframes logoSlide {
 				from{
@@ -81,7 +83,7 @@
 		</style>
 	</head>
 	<body>
-		<img id="clientLogo" src="./images/logo.png" width="90%" height="90%"></img>
+		<img id="clientLogo" src="./images/logo.png" width="90%" height="90%">
 		<div id="status">
 			<p id="details"></p>
 			<p id="message"></p>

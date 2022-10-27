@@ -99,6 +99,11 @@ ipcRenderer.on('preloadSettings', (event, preferences, version, filedir) => {
         fpsOut.style.position = "fixed";
         fpsOut.style.left = 0;
         fpsOut.style.top = 0;
+        fpsOut.style.backgroundColor = 'rgba(0, 12, 0, 0.2)'
+        fpsOut.style.color = 'white'
+        fpsOut.style.zIndex = 100;
+        fpsOut.style.padding = '5px';
+        fpsOut.style.borderBottomRightRadius = '.2em';
         document.body.appendChild(fpsOut);
     
         function refreshLoop() {
@@ -152,7 +157,7 @@ ipcRenderer.on('preloadSettings', (event, preferences, version, filedir) => {
     settingsHolder.appendChild(settingSeparator);
     settingHeader = document.createElement('div');
     settingHeader.setAttribute("id", "clientSettingsTab");
-    settingHeader.setAttribute("style", "color:white;margin-top: 14px; margin-bottom: 14px; width: 200px; height: 40px; text-align:center; border-radius:4px; border:2px solid gray");
+    settingHeader.setAttribute("style", "color:white;margin-top: 14px; margin-bottom: 14px; width: 200px; height: 40px; text-align:center; border-radius:4px; border:2px solid gray; padding: .5em; cursor: pointer;");
     settingHeader.innerHTML = `<p style="font-size: 18px; margin-top: 8px;">Edit Client Settings</p>`;
     settingsHolder.appendChild(settingHeader);
 
