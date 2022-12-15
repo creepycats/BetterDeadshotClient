@@ -97,6 +97,7 @@ ipcRenderer.on('preloadSettings', (event, preferences, version, filedir) => {
         var fps;
         var fpsOut = document.createElement("h2");
         fpsOut.style.position = "fixed";
+        fpsOut.style.color = grey;
         fpsOut.style.left = 0;
         fpsOut.style.top = 0;
         document.body.appendChild(fpsOut);
